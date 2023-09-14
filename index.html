@@ -30,14 +30,16 @@
     // Hide individual buildings in this area using 3D Tiles Styling language.
     buildingsTileset.style = new Cesium.Cesium3DTileStyle({
     // Create a style rule to control each building's "show" property.
-  //show: {
-  //  conditions : [
+    show: {
+      conditions : [
       // Any building that has this elementId will have `show = false`.
-  //    ['${elementId} === 404044208', false],
-        // If a building does not have one of these elementIds, set `show = true`.
-  //    [true, true]
-  //  ]
-//  },
+           ['${elementId} === 779115979', false],
+           ['${elementId} === 779115977', false],
+           ['${elementId} === 779115980', false],
+           // If a building does not have one of these elementIds, set `show = true`.
+           [true, true]
+      ]
+   },
   // Set the default color style for this particular 3D Tileset.
   // For any building that has a `cesium#color` property, use that color, otherwise make it white.
   color: "Boolean(${feature['cesium#color']}) ? color(${feature['cesium#color']}) : color('#ffffff')"
