@@ -20,10 +20,10 @@
       timeline: false,
       animation: false,
       vrButton: true,
-      //terrainProvider: Cesium.createWorldTerrain()
-      terrainProvider: await Cesium.CesiumTerrainProvider.fromIonAssetId(
-          763139
-      ),
+      terrainProvider: Cesium.createWorldTerrain()
+      //terrainProvider: await Cesium.CesiumTerrainProvider.fromIonAssetId(
+      //    763139
+      //),
     });
     // Add Cesium OSM Buildings.
     const buildingsTileset = viewer.scene.primitives.add(Cesium.createOsmBuildings());
