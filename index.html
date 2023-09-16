@@ -49,7 +49,13 @@
   // For any building that has a `cesium#color` property, use that color, otherwise make it white.
   // color: "Boolean(${elementId} === 183319689') ? color('#ff0000') : color('#ffffff')"
   //color: "Boolean(${feature['cesium#color']}) ? color(${feature['cesium#color']}) : color('#ffffff')"
-  color: "Boolean(${feature['cesium#color']}) ? color('#00ff00') : color('#ff0000')"
+  //color: "Boolean(${feature['cesium#color']}) ? color('#00ff00') : color('#ff0000')"
+  color : {
+        conditions : [
+            ['${elementId} === 183319689', color('#FF0000')],
+            [true, color('#FFFFFF')]
+        ]
+    }
 });
   </script>
 </body>
