@@ -52,9 +52,9 @@
   //color: "Boolean(${feature['cesium#color']}) ? color('#00ff00') : color('#ff0000')"
   color : {
         conditions : [
-            ['${elementId} === 183319689', 'color("#FF0000")'],
-            ['${elementId} === 778749794', 'color("#0000FF")'],
-            ['${elementId} === 967944458', 'color("#00FF00")'],
+            ['${elementId} === 183319689', 'color("#FF0000", 0.5)'],
+            ['${elementId} === 778749794', 'color("#0000FF", 0.5)'],
+            ['${elementId} === 967944458', 'color("#00FF00", 0.5)'],
             [true, 'color("#FFFFFF")']
         ]
     }
